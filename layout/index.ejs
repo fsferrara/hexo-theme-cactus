@@ -54,15 +54,47 @@
   <% } %>
 </section>
 
-<% if (site.data.projects) { %>
+<% if (site.data.readings) { %>
 <section id="projects">
-  <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
+  <span class="h1">Readings</span>
   <ul class="project-list">
-    <% for(var obj in site.data.projects){ %>
+    <% var top_five = site.data.readings.slice(0,5) %>
+    <% for(var obj in top_five){ %>
       <li class="project-item">
-        <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>: <%- markdown(site.data.projects[obj].desc) %>
+        <a href="<%= top_five[obj].url %>"><%= top_five[obj].name %></a>: <%- markdown(top_five[obj].desc) %>
       </li>
     <% } %>
   </ul>
+  <a href="/readings/">> more...</a>
+</section>
+<% } %>
+
+<% if (site.data.talks) { %>
+<section id="projects">
+  <span class="h1">Talks</span>
+  <ul class="project-list">
+    <% var top_five = site.data.talks.slice(0,5) %>
+    <% for(var obj in top_five){ %>
+      <li class="project-item">
+        <a href="<%= top_five[obj].url %>"><%= top_five[obj].name %></a>: <%- markdown(top_five[obj].desc) %>
+      </li>
+    <% } %>
+  </ul>
+  <a href="/talks/">> more...</a>
+</section>
+<% } %>
+
+<% if (site.data.projects) { %>
+<section id="projects">
+  <span class="h1">Projects</span>
+  <ul class="project-list">
+    <% var top_five = site.data.projects.slice(0,5) %>
+    <% for(var obj in top_five){ %>
+      <li class="project-item">
+        <a href="<%= top_five[obj].url %>"><%= top_five[obj].name %></a>: <%- markdown(top_five[obj].desc) %>
+      </li>
+    <% } %>
+  </ul>
+  <a href="/projects/">> more...</a>
 </section>
 <% } %>

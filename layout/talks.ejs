@@ -1,0 +1,12 @@
+<% if (site.data.talks) { %>
+<section id="projects">
+  <span class="h1">Talks</span>
+  <ul class="project-list">
+    <% for(var obj in site.data.talks){ %>
+      <li class="project-item">
+        <a href="<%= site.data.talks[obj].url %>"><%= site.data.talks[obj].name %></a>: <%= site.data.talks[obj].desc %>
+      </li>
+    <% } %>
+  </ul>
+</section>
+<% } %>

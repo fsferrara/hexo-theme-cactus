@@ -1,0 +1,12 @@
+<% if (site.data.readings) { %>
+<section id="projects">
+  <span class="h1">Readings</span>
+  <ul class="project-list">
+    <% for(var obj in site.data.readings){ %>
+      <li class="project-item">
+        <a href="<%= site.data.readings[obj].url %>"><%= site.data.readings[obj].name %></a>: <%= site.data.readings[obj].desc %>
+      </li>
+    <% } %>
+  </ul>
+</section>
+<% } %>
