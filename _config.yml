@@ -26,9 +26,9 @@ nav:
 social_links:
   github: http://github.com/fsferrara
   twitter: http://twitter.com/fsferrara
-  facebook: https://www.facebook.com/saverix83
+  #facebook: https://www.facebook.com/saverix83
   linkedin: http://www.linkedin.com/in/fsferrara
-  mail: mailto:saverix@gmail.com
+  #mail: mailto:email@example.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
